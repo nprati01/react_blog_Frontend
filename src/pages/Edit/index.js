@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import { getBlog, deleteBlog, updateBlog } from '../../utils/blog-services'
+import { getBlogDetails, deleteBlog, updateBlog } from '../../utils/blog-services'
 import { useParams, useNavigate } from 'react-router-dom'
 
 
@@ -24,8 +24,8 @@ export default function Edit() {
 
     async function handleRequest() {
         try {
-            const blogToEdit = await getBlog(id)
-            console.log(blogToEdit)
+            const blogToEdit = await getBlogDetails(id)
+            console.log('this it the blog to edit', blogToEdit)
             setBlog(blogToEdit)
             const { author, title, date, headline, image, content } = blogToEdit
             setEditForm({ author, title, date, headline, image, content})
@@ -37,7 +37,7 @@ export default function Edit() {
     }
 
     useEffect(() => {
-    handleRequest()
+        handleRequest()
     }, [isLoading])
 
     async function handleBlogDelete() {
@@ -67,7 +67,7 @@ export default function Edit() {
     const handleSubmit = async (e) => {
         e.preventDefault()
         try {
-            console.log(editForm)
+            console.log('this is edit form', editForm)
             const updatedBlog = await updateBlog(id, editForm)
 
             if (updatedBlog._id) {
@@ -81,10 +81,10 @@ export default function Edit() {
         }
     }
 
-    const loaded = () => {
+    const loaded = () => (
         <>
         <div className="Edit-section-header">
-            <h1>Edit Page for {blog.title}</h1>
+            <h1>Edit Blog Post {blog.title}</h1>
             {"|"}
             <button onClick={handleBlogDelete}> Delete Blog</button>
         </div>
@@ -105,7 +105,7 @@ export default function Edit() {
             <button>Edit Blog {blog.title}</button>
         </form>
         </>
-    }
+    )
 
 
     const loading = () => {

@@ -20,7 +20,7 @@ export async function createBlog(data){
     }
 }
 
-export async function getBlog(id){
+export async function getBlogDetails(id){
     try {
         const blogData = await blogAPI.detail(id)
         return blogData

@@ -48,6 +48,8 @@ export async function detail(id){
         }
         const url = `${BASE_URL}/${id}`
         const response = await fetch(url, options)
+        console.log(url)
+        console.log(response)
 
         if(response.ok){
             return response.json()

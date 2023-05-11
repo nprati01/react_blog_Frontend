@@ -1,8 +1,8 @@
 import {Routes, Route} from 'react-router'
 
-import Blogs from '../Blogs'
-import Show from '../Show'
-import Edit from '../Edit'
+import Blogs from '../../pages/Blogs'
+import Show from '../../pages/Show'
+import Edit from '../../pages/Edit'
 
 export default function Main(props){
     return (

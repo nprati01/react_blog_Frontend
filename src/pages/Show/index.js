@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import { getBlog } from '../../utils/blog-services'
+import { getBlogDetails } from '../../utils/blog-services'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
 
@@ -12,7 +12,7 @@ export default function Show(props){
 
     async function handleRequest(){
         try {
-            const blogData = await getBlog(id)
+            const blogData = await getBlogDetails(id)
             console.log(blogData)
             setBlog(blogData)
             setIsLoading(false)
@@ -20,7 +20,7 @@ export default function Show(props){
             console.log(err)
         }
     }
-
+    console.log(`Current blog: ${JSON.stringify(blog)}`)
     useEffect(()=>{
         handleRequest()
     }, [])
