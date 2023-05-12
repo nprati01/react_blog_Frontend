@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
 
 import { getBlogDetails, deleteBlog, updateBlog } from '../../utils/blog-services'
 import { useParams, useNavigate } from 'react-router-dom'
@@ -9,6 +10,7 @@ const Edit = () => {
 
     const { id } = useParams()
     const navigate = useNavigate()
+    const {user} = useAuth0()
 
 
     // console.log(id)
@@ -21,7 +23,7 @@ const Edit = () => {
         headline:"",
         image: "",
         content:"",
-        owner: "",
+        owner: user.sub,
 
     })
 
@@ -108,7 +110,7 @@ const Edit = () => {
             {/* {image} */}
             <input onChange={handleChange} type="text" value={editForm.image} name="image" placeholder="Add an optional image for your blog post" />
             {/* {content} */}
-            <input onChange={handleChange} type="text" value={editForm.content} name="content" placeholder="Enter the content of this post" />
+            <textarea onChange={handleChange} type="text" value={editForm.content} name="content" placeholder="Enter the content of this post" />
 
             <button> Save Changes </button>
         </form>
@@ -133,4 +135,7 @@ const Edit = () => {
         </section>
     )
 }
-export default Edit
+export default withAuthenticationRequired(Edit, {
+    // Show a message while the user waits to be redirected to the login page.
+    onRedirecting: () => <div>Redirecting you to the login page...</div>,
+  });
