@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react'
 
 import { getBlogDetails, deleteBlog, updateBlog } from '../../utils/blog-services'
 import { useParams, useNavigate } from 'react-router-dom'
-import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
+
 
 
 const Edit = () => {
 
     const { id } = useParams()
     const navigate = useNavigate()
-    const { user } = useAuth0();
+
 
     // console.log(id)
     const [blog, setBlog] = useState(null)
@@ -21,7 +21,7 @@ const Edit = () => {
         headline:"",
         image: "",
         content:"",
-        owner: {user}
+        owner: "",
 
     })
 
@@ -87,7 +87,7 @@ const Edit = () => {
     }
 
     const loaded = () =>
-        {if(blog.owner === user.sub)
+        (
 
 
         <>
@@ -110,10 +110,10 @@ const Edit = () => {
             {/* {content} */}
             <input onChange={handleChange} type="text" value={editForm.content} name="content" placeholder="Enter the content of this post" />
 
-            <button>Edit Blog {blog.title}</button>
+            <button> Save Changes </button>
         </form>
         </>
-        }
+        )
 
 
     const loading = () => {
@@ -133,5 +133,4 @@ const Edit = () => {
         </section>
     )
 }
-export default withAuthenticationRequired(Edit, {onRedirecting: () => <div>Redirecting you to the login page...</div>,
-});
+export default Edit

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { getBlogs } from '../../utils/blog-services'
 import { Link } from 'react-router-dom'
+
 import Moment from 'react-moment'
 
 
@@ -8,6 +9,7 @@ export default function Blogs(props) {
 
   const [blogs, setBlogs] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
+
 
 
 
@@ -30,16 +32,13 @@ export default function Blogs(props) {
       return (
               <div className='bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8' key={blog._id}>
                 <div className="relative overflow-hidden shadow-md pb-80 mb-6">
-                  <img className="object-top absolute h-full w-full   shadow-lg rounded-t-lg lg:rounded-lg" src={blog.image} alt="" />
+                  <img className="object-center absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg" src={blog.image} alt="" />
                 </div>
                 <h1 className='ransition duration-700 text-center mb-8 cursor-pointer hover:text-pink-600 text-3xl font-semibold"'>
                   <Link to={`/blogs/${blog._id}`}>{blog.title}</Link>
                 </h1>
                 <div className="block lg:flex text-center items-center justify-center mb-8 w-full">
-                  <div className="flex items-center justify-center mb-4 lg:mb-0 w-full lg:w-auto mr-8 items-center">
-                    Add author image
-                    <p className='inline align-middle text-gray-700 ml-2 font-medium text-lg'>{blog.author}</p>
-                  </div>
+
                   <div className="font-medium text-gray-700">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
