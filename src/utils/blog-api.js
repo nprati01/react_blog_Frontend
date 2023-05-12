@@ -1,4 +1,4 @@
-const BASE_URL= "http://localhost:4000/blogs"
+const BASE_URL= "https://nik-dev-blog.herokuapp.com/blogs"
 
 export async function index(){
     try {
