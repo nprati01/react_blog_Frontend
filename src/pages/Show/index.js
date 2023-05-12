@@ -23,6 +23,7 @@ export default function Show(props){
     console.log(`Current blog: ${JSON.stringify(blog)}`)
     useEffect(()=>{
         handleRequest()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const loaded = () =>{

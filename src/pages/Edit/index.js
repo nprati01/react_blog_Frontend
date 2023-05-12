@@ -86,7 +86,10 @@ const Edit = () => {
         }
     }
 
-    const loaded = () => (
+    const loaded = () =>
+        {if(blog.owner === user.sub)
+
+
         <>
         <div className="Edit-section-header">
             <h1>Edit Blog Post {blog.title}</h1>
@@ -110,7 +113,7 @@ const Edit = () => {
             <button>Edit Blog {blog.title}</button>
         </form>
         </>
-    )
+        }
 
 
     const loading = () => {
