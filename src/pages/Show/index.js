@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import { getBlogDetails } from '../../utils/blog-services'
 import { useParams } from 'react-router'
 import { Link } from 'react-router-dom'
+import  Comments from '../../components/Comments'
 
 export default function Show(props){
     const {id} = useParams()
@@ -37,6 +38,7 @@ export default function Show(props){
                 <p>{blog.date}</p>
                 <p>{blog.headline}</p>
                 <p>{blog.content}</p>
+                <Comments />
 
             </div>
 
