@@ -1,7 +1,12 @@
+import React from "react"
+import { Link } from "react-router-dom"
+
 const Nav = (props) => {
     return (
-      <nav className="flex-no-wrap relative flex w-full items-center justify-between bg-white- py-2  lg:flex-wrap lg:justify-start lg:py-4">
-      <h1>Dev Blog</h1>
+      <nav className="relative px-4 py-4 flex justify-between items-center bg-white">
+        <Link to={"/"} className="text-3xl font-bold leading-none">
+          <svg class="h-10" alt="logo" viewBox="0 0 10240 10240">Logo</svg>
+        </Link>
 
       </nav>
 

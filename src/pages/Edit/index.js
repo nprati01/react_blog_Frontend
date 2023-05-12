@@ -1,14 +1,15 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { getBlogDetails, deleteBlog, updateBlog } from '../../utils/blog-services'
 import { useParams, useNavigate } from 'react-router-dom'
+import { useAuth0, withAuthenticationRequired } from '@auth0/auth0-react';
 
 
-
-export default function Edit() {
+const Edit = () => {
 
     const { id } = useParams()
     const navigate = useNavigate()
+    const { user } = useAuth0();
 
     // console.log(id)
     const [blog, setBlog] = useState(null)
@@ -19,7 +20,9 @@ export default function Edit() {
         date: "",
         headline:"",
         image: "",
-        content:""
+        content:"",
+        owner: {user}
+
     })
 
     async function handleRequest() {
@@ -36,8 +39,10 @@ export default function Edit() {
         }
     }
 
-    useEffect(() => {
-        handleRequest()
+
+    useEffect(() =>
+    {handleRequest();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [isLoading])
 
     async function handleBlogDelete() {
@@ -125,3 +130,5 @@ export default function Edit() {
         </section>
     )
 }
+export default withAuthenticationRequired(Edit, {onRedirecting: () => <div>Redirecting you to the login page...</div>,
+});
