@@ -76,6 +76,10 @@ https://trello.com/b/hKbhrioI/react-blog
 
 ## Functionality updates
 - Improve authorization and implement token based authentication
+- display blogs from most recent posted to first posted 
+- have blog categories so you can tag blog posts 
+- have widgets on the blog index page for featured posts and feature categories 
+- on the blog show page have a widget for realted blog posts related to the category 
 
 
 
