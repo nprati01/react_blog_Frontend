@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+<!-- markdownlint-disable -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# My Dev Blog
 
-## Available Scripts
+## Developed by:
+-Nicole Prati
 
-In the project directory, you can run:
+## Summary:
+- My Dev Blog was designed with me and other developers in mind. Thought process was stack overflow meets blog and make it pretty
+- View All Blog Posts posted on My Dev Blog-- a user can see everyones post
+- Log in and:
+- Create/Update/Delete Blog posts made by the specified user
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- ## Screenshot(s):
 
-### `npm test`
+## Home Page
+<img src="main_app/static/main_app/home-page.png" alt="Home Page" width="50%" height="50%">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## All Festivals Page
+<img src="main_app/static/main_app/allfestival.png" alt="All Festivals" width="50%" height="50%">
 
-### `npm run build`
+## My Festivals Page
+<img src="main_app/static/main_app/my-festivals.png" alt="My Festivals " width="50%" height="50%">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Festival Details
+<img src="main_app/static/main_app/myfestdetail.png" alt=" MY festival details" width="50%" height="50%">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Add Task
+<img src="main_app/static/main_app/task-page.png" alt="Add task" width="50%" height="50%">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Add Packing/suitcase Item
+<img src="main_app/static/main_app/packing-page.png" alt="Add Item to pack" width="50%" height="50%">
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Technologies Used**:
+- MongoDB
+- Express
+- Node
+- React
+- Tailwind CSS
+- Auth 0
+- JavaScript
+- Heroku
+- Netlify
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Getting Started:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ ## Deployed app
+https://nik-dev-blog.netlify.app/
+https://dashboard.heroku.com/apps/nik-dev-blog
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Planning Details:
+https://trello.com/b/hKbhrioI/react-blog
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Future Enhancements :
 
-### Making a Progressive Web App
+## Admin
+-Create admin functionality that allows a user with an admin role to create/update/delete Blogs and comments esentailly moderate the site
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## User
+- All logged in users can comment on other blog posts, Up or Downvote them
+- A logged in user can go to thier profile page and see all of thier posts along with profile information
 
-### Advanced Configuration
+## Functionality updates
+- Imporve authorization and implement token based authentication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Attributions:
+https://www.jsmastery.pro/
+https://tailwindcss.com/docs/animation
