@@ -16,22 +16,27 @@
 - ## Screenshot(s):
 
 ## Home Page
-<img src="main_app/static/main_app/home-page.png" alt="Home Page" width="50%" height="50%">
+![HomePage](https://github.com/nprati01/react_blog_Frontend/assets/111821724/2cce77c6-5309-4143-a888-d2c1386528ae)
 
-## All Festivals Page
-<img src="main_app/static/main_app/allfestival.png" alt="All Festivals" width="50%" height="50%">
+## All Blogs
+![AllBlogs](https://github.com/nprati01/react_blog_Frontend/assets/111821724/b52a1b9f-06d6-48e4-a820-4c49958e9122)
 
-## My Festivals Page
-<img src="main_app/static/main_app/my-festivals.png" alt="My Festivals " width="50%" height="50%">
 
-## Festival Details
-<img src="main_app/static/main_app/myfestdetail.png" alt=" MY festival details" width="50%" height="50%">
+## Create Blog Page
+![createBlog](https://github.com/nprati01/react_blog_Frontend/assets/111821724/dcf4eac4-d0d4-4470-8804-988c6b2e23a7)
 
-## Add Task
-<img src="main_app/static/main_app/task-page.png" alt="Add task" width="50%" height="50%">
 
-## Add Packing/suitcase Item
-<img src="main_app/static/main_app/packing-page.png" alt="Add Item to pack" width="50%" height="50%">
+## Blog Show
+![BlogShow](https://github.com/nprati01/react_blog_Frontend/assets/111821724/5066cc99-c127-4d6b-b011-d8c6bcb5d357)
+
+
+## Edit Blog
+
+![edidBlog](https://github.com/nprati01/react_blog_Frontend/assets/111821724/b238d0ac-e1d2-4840-9f68-0e4a15f3745d)
+
+## Delete Blog
+
+![destroyBlog](https://github.com/nprati01/react_blog_Frontend/assets/111821724/c59e0e0a-1772-4a23-880e-b7e166fe024b)
 
 
 ## Technologies Used**:
@@ -70,7 +75,7 @@ https://trello.com/b/hKbhrioI/react-blog
 - A logged in user can go to thier profile page and see all of thier posts along with profile information
 
 ## Functionality updates
-- Imporve authorization and implement token based authentication
+- Improve authorization and implement token based authentication
 
 
 
