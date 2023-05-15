@@ -30,9 +30,9 @@ export default function Show(props){
     const loaded = () => {
         return (
             <>
-              <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
+              <div className="bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8 lg:w-5/6 md:w-2/3 mx-auto">
                 <div className="relative overflow-hidden shadow-md mb-6">
-                  <img src={blog.image} alt="" className="object-top h-full w-full object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
+                  <img src={blog.image} alt="" className="object-top h-25 w-25 object-cover  shadow-lg rounded-t-lg lg:rounded-lg" />
                 </div>
                 <div className="px-4 lg:px-0">
                   <div className="flex items-center mb-8 w-full">
@@ -44,7 +44,7 @@ export default function Show(props){
                         className="align-middle rounded-full"
                         src={post.author.photo.url}
                       /> */}
-                      <p className="align-middle text-gray-700 ml-2 font-medium text-lg">{blog.author}</p>
+                      <p className="align-middle text-gray-700 ml-2 font-medium text-lg">Written By: {blog.author}</p>
                     </div>
                     <div className="font-medium text-gray-700 items-center">
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 inline mr-2 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -58,7 +58,7 @@ export default function Show(props){
                   <p>{blog.content}</p>
                 </div>
               </div>
-              <Link to={`/blogs/${blog._id}/edit`}><button>Edit Blog</button></Link>
+              <Link to={`/blogs/${blog._id}/edit`}><button className="px-4 py-1 text-sm text-pink-600 font-semibold rounded-full border border-pink-200 hover:text-white hover:bg-pink-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-pink-600 focus:ring-offset-2">Edit Blog</button></Link>
 
 
             </>

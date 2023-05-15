@@ -30,7 +30,7 @@ export default function Blogs(props) {
   const loaded = () => {
     return blogs?.map((blog) => {
       return (
-              <div className='bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8' key={blog._id}>
+              <div className='bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8 max-w-2xl mx-auto' key={blog._id}>
                 <div className="relative overflow-hidden shadow-md pb-80 mb-6">
                   <img className="object-center absolute h-80 w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg" src={blog.image} alt="" />
                 </div>
