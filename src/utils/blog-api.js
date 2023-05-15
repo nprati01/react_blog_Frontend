@@ -1,4 +1,6 @@
+
 const BASE_URL= "https://nik-dev-blog.herokuapp.com/blogs"
+
 
 export async function index(){
     try {
@@ -18,11 +20,16 @@ export async function index(){
     }
 }
 export async function create(data){
+
+
     try {
+
         const options = {
             method: 'POST',
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                
+
             },
             body: JSON.stringify(data)
         }

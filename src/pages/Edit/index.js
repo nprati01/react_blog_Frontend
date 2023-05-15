@@ -10,7 +10,7 @@ const Edit = () => {
 
     const { id } = useParams()
     const navigate = useNavigate()
-    const {user} = useAuth0()
+    const {User} = useAuth0()
 
 
     // console.log(id)
@@ -23,7 +23,7 @@ const Edit = () => {
         headline:"",
         image: "",
         content:"",
-        owner: user.sub,
+        owner: User.email,
 
     })
 
@@ -32,8 +32,8 @@ const Edit = () => {
             const blogToEdit = await getBlogDetails(id)
             console.log('this it the blog to edit', blogToEdit)
             setBlog(blogToEdit)
-            const { author, title, date, headline, image, content } = blogToEdit
-            setEditForm({ author, title, date, headline, image, content})
+            const { author, title, date, headline, image, content, owner} = blogToEdit
+            setEditForm({ author, title, date, headline, image, content, owner})
             setIsLoading(false)
 
         } catch (err) {
@@ -104,8 +104,8 @@ const Edit = () => {
                 <button className="px-4 py-1 text-sm text-red-600 font-semibold rounded-full border border-red-200 hover:text-white hover:bg-red-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-red-600 focus:ring-offset-2" onClick={handleBlogDelete}> Delete Blog</button>
             </div>
         </div>
-        <section className="bg-white shadow-lg rounded-lg mx-auto xl:max-w-xl p-4">
-            <form className="grid grid-cols-1 md:max-w-75% xl:max-w-xl gap-4 my-12 mx-auto pt-4" onSubmit={handleSubmit}>
+        <section className="bg-white shadow-lg rounded-lg mx-auto md:max-w-md xl:max-w-2xl p-4">
+            <form className="grid grid-cols-1 md:max-w-l xl:max-w-xl gap-4 my-12 mx-auto pt-4" onSubmit={handleSubmit}>
             {/* {name} */}
             <label className="mt-2 uppercase font-bold text-lg text-grey-darkest">Content Creator Name</label>
             <input className="border py-2 px-3 text-grey-darkest" onChange={handleChange} type="text" value={editForm.author} name="author" placeholder="Enter the authors name " />
