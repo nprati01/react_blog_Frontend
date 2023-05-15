@@ -7,7 +7,7 @@ import { useAuth0, withAuthenticationRequired} from '@auth0/auth0-react';
 
 
 const BlogCreate = (props)=> {
-  const { User} = useAuth0();
+  const { user} = useAuth0();
   const navigate = useNavigate();
 
 
@@ -22,7 +22,7 @@ const BlogCreate = (props)=> {
         headline:"",
         image: "",
         content:"",
-        owner: User.sub
+        owner: user.sub
 
 
 

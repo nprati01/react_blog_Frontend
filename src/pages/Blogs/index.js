@@ -46,7 +46,7 @@ export default function Blogs(props) {
                     <span className="align-middle"><Moment format='MMM DD, YYYY'>{blog.date}</Moment></span>
                   </div>
                 </div>
-                <p className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8">
+                <p className="italic text-center text-lg text-gray-700 px-4 lg:px-20 mb-8">
                 {blog.headline}
                 </p>
                 <div className="text-center">

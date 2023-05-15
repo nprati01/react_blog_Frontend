@@ -10,7 +10,7 @@ const Edit = () => {
 
     const { id } = useParams()
     const navigate = useNavigate()
-    const {User} = useAuth0()
+    const {user} = useAuth0()
 
 
     // console.log(id)
@@ -23,7 +23,7 @@ const Edit = () => {
         headline:"",
         image: "",
         content:"",
-        owner: User.email,
+        owner: user.email,
 
     })
 
