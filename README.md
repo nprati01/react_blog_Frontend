@@ -74,12 +74,13 @@ https://trello.com/b/hKbhrioI/react-blog
 - All logged in users can comment on other blog posts, Up or Downvote them
 - A logged in user can go to thier profile page and see all of thier posts along with profile information
 
-## Functionality updates
+## Functionality and styling updates
 - Improve authorization and implement token based authentication
 - display blogs from most recent posted to first posted 
 - have blog categories so you can tag blog posts 
 - have widgets on the blog index page for featured posts and feature categories 
 - on the blog show page have a widget for realted blog posts related to the category 
+- date picker in create and update blog 
 
 
 
